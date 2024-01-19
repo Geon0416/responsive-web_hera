@@ -52,9 +52,11 @@ $(document).ready(function(){
         Timer = setInterval(fadeInOut,3000)
     });
 
+    let w_size;
+
     // 윈도우창의 가로 스크롤값에 따른 이미지 변경
     $(window).resize(function(){
-        let w_size = $(this).width();
+        w_size = $(this).width();
         // console.log(w_size);
 
         if(w_size<=1024){
@@ -70,5 +72,21 @@ $(document).ready(function(){
         }
 
     });
+
+    // 기기 기종의 너비에 따른 메인 슬라이드 이미지 변경 서식
+    w_size = $(this).width();
+        // console.log(w_size);
+
+        if(w_size<=1024){
+            // console.log('태블릿, 모바일서식');
+            $('#main_slide .slide1 img').attr('src','./images/main_slide/main_slide_m_img1.png');
+            $('#main_slide .slide2 img').attr('src','./images/main_slide/main_slide_m_img2.png');
+            $('#main_slide .slide3 img').attr('src','./images/main_slide/main_slide_m_img3.png');
+            $('#main_slide .slide4 img').attr('src','./images/main_slide/main_slide_m_img4.jpg');
+            $('#main_slide .slide5 img').attr('src','./images/main_slide/main_slide_m_img5.jpg');
+        }else{
+            $('.slide1 img').attr('src','./images/main_slide/main_slide_img1.jpg');
+            // console.log('pc서식');
+        }
 
 });

@@ -1,8 +1,12 @@
 @charset "utf-8";
 
 /* 모바일 해상도 서식 */
-@media screen and (min-width:0px) and (max-width:766px){
+@media screen and (max-width:766px){
 
+ body{
+    overflow-x:hidden ;
+    box-sizing: border-box;
+ }
  /* 헤더 푸터 공통서식 */
  #header{
     position: relative;
@@ -14,13 +18,13 @@
     position:fixed !important;
     top:0px;left:0px;
     width:100%;
+    z-index:9999;
     background:linear-gradient(180deg,#bbbbbb 60%,rgba(248, 243, 213, .01));
 }
 
 /* 헤더 로고 서식 */
 header h1 a{
     position:absolute;
-    position: fixed;
     left: 50%; top: 10px;
     transform: translate(-50%);
 }
@@ -36,7 +40,7 @@ header h1 a img{
     top: 8px;
 }
 .t_btn{
-    position: fixed;
+    position: absolute;
     top: 5px; left: 10px;
     font-size: 1.6rem;
     color: #000;
