@@ -1,0 +1,13 @@
+@charset "uft-8";
+
+/*기본서식 */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+    font-family: "Noto Sans KR",'맑은 고딕', Arial, sans-serif;
+    font-size: 13px;
+    overflow-x: hidden;
+}
+
+a{color: #000; text-decoration: none;}

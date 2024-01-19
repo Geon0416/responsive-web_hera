@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HERA  홈페이지</title>
+    <!-- 1.초기화 -->
+    <link rel="stylesheet" href="./css/reset.css" type="text/css">
+    <!-- 2. 기본서식 -->
+    <link rel="stylesheet" href="./css/base.css" type="text/css">
+    <!-- 3. 공통서식 header, footer 공통서식 -->
+    <link rel="stylesheet" href="./css/common.css" type="text/css">
+    <!-- 4. pc해상도 서식 -->
+    <link rel="stylesheet" href="./css/main.css" type="text/css">
+    <!-- 5. tablet 해상도 서식 -->
+    <link rel="stylesheet" href="./css/tablet.css" type="text/css">
+    <!-- 6. mobile 해상도 서식 -->
+    <link rel="stylesheet" href="./css/mobile.css" type="text/css">
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+     <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css" type="text/css"/>
+
+    <!-- 제이쿼리 라이브러리 연결하기 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <!--제이쿼리 -->
+    <!-- login_popup -->
+    <script src="./js/login_popup.js" defer></script>
+    <!-- search_popup -->
+    <script src="./js/search_popup.js" defer></script>
+    <!-- top 버튼 -->
+    <script src="./js/top_btn.js" defer></script>
+    <!-- 스크롤의 위치에 따라 헤더영역 변하는 서식 -->
+    <script src="./js/header_section.js" defer></script>
+
+    
+</head>
+<body>
+    <!-- 헤더영역 시작 -->
+    <header id="header">
+        
+        <div class="h_top">
+            <!-- HERA 로고 -->
+            <h1>
+                <a href="index.html"><img src="./images/hera_logo_B.png" alt="logo"></a>
+            </h1>
+            <!-- 전체메뉴 -->
+            <input type="checkbox" id="toggle">
+            <label for="toggle" class="t_btn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <nav class="gnb">
+                <input type="checkbox" id="close_toggle">
+                <label for="toggle" class="close_t_btn">
+                    <i class="fa-solid fa-close"></i>
+                </label>
+                <ul>
+                    <li class="top_menu">
+                        <a href="" id="location_btn"><img src="./images/location_icon.png" alt=""><span>매장위치</span></a>
+                        <a href="" id="search_btn"><i class="fa-solid fa-magnifying-glass"></i><span>제품검색</span></a>
+                        <a href="" id="login_btn"><i class="fa-regular fa-user"></i><span>로그인</span></a>
+                    </li>
+                  
+                    <li class="mid_menu">
+                        <label for="brand">헤라 스토리</label><i class="fa-solid fa-angle-right"></i>
+                        <div class="brand_box sub">
+                            <ul>
+                                <li><a href="#" title="브랜드 소개">브랜드 소개</a></li>
+                                <li><a href="#" title="서울리스타 히스토리">Seoulista History</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mid_menu">
+                        <label for="make_up">메이크업</label><i class="fa-solid fa-angle-right"></i>
+                        <div class="make_up sub">
+                            <ul>
+                                <li><a href="#" title="페이스 소개">페이스</a>
+                                    <ul>
+                                        <li><a href="#" title="파운데이션">파운데이션</a></li>
+                                        <li><a href="#" title="쿠션">쿠션</a></li>
+                                        <li><a href="#" title="베이스">베이스/프라이머</a></li>
+                                        <li><a href="#" title="파우더">파우더/픽셔</a></li>
+                                        <li><a href="#" title="컨실러">컨실러</a></li>
+                                        <li><a href="#" title="브러시">브러시/어플리케이터</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" title="립">립</a>
+                                    <ul>
+                                        <li><a href="#" title="립스틱">립스틱</a></li>
+                                        <li><a href="#" title="틴트">틴트</a></li>
+                                        <li><a href="#" title="립밤/글로스">립밤/글로스</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" title="아이">아이</a>
+                                    <ul>
+                                        <li><a href="#" title="아이섀도">아이섀도</a></li>
+                                        <li><a href="#" title="마스카라">마스카라</a></li>
+                                        <li><a href="#" title="아이브로우">아이브러우</a></li>
+                                        <li><a href="#" title="아이라이너">아이라이너</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mid_menu">
+                        <label for="skin_care">스킨케어</label><i class="fa-solid fa-angle-right"></i>
+                        <div class="skin_care_box sub">
+                            <ul>
+                                <li><a href="#" title="스킨케어 라인">스킨케어 라인</a>
+                                    <ul>
+                                        <li><a href="#" title="시그니아">시그니아</a></li>
+                                        <li><a href="#" title="에이지 어웨어">에이지 어웨어</a></li>
+                                        <li><a href="#" title="하이드로_리플렉팅">하이드로 리플렉팅</a></li>
+                                        <li><a href="#" title="하이드로_듀 플러핑">하이드로_듀 플러핑</a></li>
+                                        <li><a href="#" title="옴므">옴므</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" title="제품유형 ">제품유형</a>
+                                    <ul>
+                                        <li><a href="#" title="클렌저">클렌저</a></li>
+                                        <li><a href="#" title="토너/스킨">토너/스킨</a></li>
+                                        <li><a href="#" title="에멀션">에멀션</a></li>
+                                        <li><a href="#" title="세럼/앰플">세럼/앰플</a></li>
+                                        <li><a href="#" title="아이케어">아이케어</a></li>
+                                        <li><a href="#" title="크림">크림</a></li>
+                                        <li><a href="#" title="선케어">선케어</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" title="피부고민 ">피부고민</a>
+                                    <ul>
+                                        <li><a href="#" title="수분/보습">수분/보습</a></li>
+                                        <li><a href="#" title="브라이트닝">브라이트닝</a></li>
+                                        <li><a href="#" title="피부보호/차단">피부보호/차단</a></li>
+                                        <li><a href="#" title="안티에이징">안티에이징</a></li>
+                                        <li><a href="#" title="프리미엄 안티에이징"></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mid_menu">
+                        <label for="aroma">아로마</label><i class="fa-solid fa-angle-right"></i>
+                        <div class="aroma_box sub">
+                            <ul>
+                                <li><a href="#" title="아로마 라인">아로마 라인</a>
+                                    <ul>
+                                        <li><a href="#" title="지엘">지엘</a></li>
+                                        <li><a href="#" title="벨벳 나이트">벨벳 나이트</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" title="제품유형 ">제품유형</a>
+                                <ul>
+                                    <li><a href="#" title="향수">향수</a></li>
+                                    <li><a href="#" title="바디로션">바디로션</a></li>
+                                    <li><a href="#" title="샤워젤">샤워젤</a></li>
+                                </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mid_menu">
+                        <label for="campaign">캠페인</label><i class="fa-solid fa-angle-right"></i>
+                        <div class="campaign_box sub">
+                            <ul>
+                                <li><a href="#" title="Hera_collaboration">HERA Collaboration</a>
+                                    <ul>
+                                        <li><a href="#" title="이누야샤">이누야샤</a></li>
+                                        <li><a href="#" title="세일러문">세일러문</a></li>
+                                        <li><a href="#" title="쾌걸근육맨">쾌걸근육맨</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" title="캠페인_라이브러리">캠페인 라이브러리</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mid_menu">
+                        <label for="skin_dia">스킨진단</label><i class="fa-solid fa-angle-right"></i>
+                        <div class="skin_dia_box sub">
+                            <ul>
+                                <li><a href="#" title="문항표">문항표로 내피부와 맞는 제품찾기</a></li>
+                                <li><a href="#" title="앱설치하기">앱설치하기</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <a href="#" title="인스타"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" title="유튜브"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" title="페이스북"> <i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" title="카카오챗"> <img src="./images/ch_icon_w.png" alt="이미지"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- 제품검색창 -->
+        <div id="search_popup">
+            <div class="search_content">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="검색어를 입력해주세요.">
+                    <input type="button" value="검색">
+                    <div id="best_search">
+                        <p>추천검색어:</p>
+                        <ul>
+                            <li><a href="#" title="블랙쿠션">블랙쿠션</a></li>
+                            <li><a href="#" title="팜파스">팜파스</a></li>
+                            <li><a href="#" title="파우더매트">파우더매트</a></li>
+                            <li><a href="#" title="블랙파운데이션">블랙파운데이션</a></li>
+                            <li><a href="#" title="선크림">선크림</a></li>
+                            <li><a href="#" title="옴므">옴므</a></li>
+                            <li><a href="#" title="블랙컨실러">블랙컨실러</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="famous_wrapper">
+                        <p>인기상품</p>
+                        <ul class="famous_slide">
+                            <li>
+                                <div class="famous_img">
+                                    <a href="#" title="이미지1"><img src="./images/search_slide/search_img1.jpg" alt="슬라이드이미지"></a>
+                                </div>
+                                <div class="f_font_box"><span class="percent">10%</span> <strong>36,000원</strong><p class="name">센슈얼 파우더 매드 립스틱 3g</p><div>            
+                            </li>
+                            <li>
+                                <div class="famous_img">
+                                    <a href="#" title="이미지2"><img src="./images/search_slide/search_img2.jpg" alt="슬라이드이미지"></a>
+                                </div>
+                                <div class="f_font_box"><span class="percent">17%</span> <strong>23,000원</strong><p class="name">실키 스테이 24H 롱웨어 파운데이션 SPF 20 / PA++</p><div>            
+                            </li>
+                            <li>
+                                <div class="famous_img">
+                                    <a href="#" title="이미지3"><img src="./images/search_slide/search_img3.jpg" alt="슬라이드이미지"></a>
+                                </div>
+                                <div class="f_font_box"><span class="percent">15%</span> <strong>61,200원</strong><p class="name">하이드로 리플렉팅 마이크로 크림 50ml</p><div>            
+                            </li>
+                            <li>
+                                <div class="famous_img">
+                                    <a href="#" title="이미지4"><img src="./images/search_slide/search_img4.jpg" alt="슬라이드이미지"></a>
+                                </div>
+                                <div class="f_font_box"><span class="percent">10%</span> <strong>110,500원</strong><p class="name">에이지 어웨어 에스테틱BX 리포솜</p><div>            
+                            </li>
+                            <li>
+                                <div class="famous_img">
+                                    <a href="#" title="이미지5"><img src="./images/search_slide/search_img5.jpg" alt="슬라이드이미지"></a>
+                                </div>
+                                <div class="f_font_box"><span class="percent">10%</span> <strong>55,250원</strong><p class="name">쿼트 아이 컬러 섀도우 10.5g</p><div>            
+                            </li>
+                            <li>
+                                <div class="famous_img">
+                                    <a href="#" title="이미지6"><img src="./images/search_slide/search_img6.png" alt="슬라이드이미지"></a>
+                                </div>
+                                <div class="f_font_box"><span class="percent">17%</span> <strong>59,400원</strong><p class="name">블랙쿠션 SPF 36 / PA++</p><div>            
+                            </li>
+                            <li>
+                                <div class="famous_img">
+                                    <a href="#" title="이미지7"><img src="./images/search_slide/search_img7.png" alt="슬라이드이미지"></a>
+                                </div>
+                                <div class="f_font_box"><span class="percent">10%</span> <strong>36,000원</strong><p class="name">루즈 홀릭 매트 3g</p><div>            
+                            </li>
+                            <li>
+                                <div class="famous_img">
+                                    <a href="#" title="이미지8"><img src="./images/search_slide/search_img8.png" alt="슬라이드이미지"></a>
+                                </div>
+                                <div class="f_font_box"><span class="percent">15%</span> <strong>80,750원</strong><p class="name">시그니아 스킨 리파이닝 워터</p><div>            
+                            </li>
+                        </ul>
+                    </div>
+                    <i class="fa-solid fa-angle-left" id="famous_l_btn"></i>
+                    <i class="fa-solid fa-angle-right" id="famous_r_btn"></i>
+                    <div id="search_close_btn"><i class="fa-solid fa-angle-up">CLOSE</i></div>
+            </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+        <!-- login 창 -->
+        <div id="login_popup">
+            <div class="login_content">
+                <h2><span class="top_title">아모레퍼시픽 뷰티포인트 통합회원</span><br><span class="bottom_title">아이디로 로그인 해주세요.</span></h2>
+                <form action="">
+                        <input type="text" placeholder="아이디를 입력해주세요.">
+                        <input type="password" name="" id="" placeholder="비밀번호 입력">
+                    </form>
+                    <div class="id_pass">
+                        <input type="checkbox" name="" id="c_box">
+                        <label for="c_box">아이디 저장</label>
+                    </div>
+                    <div class="id_pw_find">
+                        <a href="#">아이디 찾기</a> 
+                        <span>&#x007C;</span> 
+                        <a href="#">비밀번호 찾기</a>
+                    </div>
+                    <div class="login_btn"><a href="#">HERA 로그인</a></div>
+                    <div class="join_btn"><a href="#">HERA 회원가입</a></div>
+                    <div class="other_login">
+                        <ul>
+                            <li><a href="#"><img src="./images/login_popup/btn_login_na.png" alt="네이버 로그인"></a></li>
+                            <li><a href="#"><img src="./images/login_popup/btn_login_ka.png" alt="카카오톡 로그인"></a></li>
+                            <li><a href="#"><img src="./images/login_popup/btn_login_fb.png" alt="페이스북 로그인"></a></li>
+                            <li><a href="#"><img src="./images/login_popup/btn_login_ap.png" alt="애플 로그인"></a></li>
+                        </ul>
+                    </div>
+                <div id="login_close_btn"><i class="fa-solid fa-angle-up">CLOSE</i></div>
+            </div>
+        
+        </div>
+    </header>
+<!-- 메인영역 시작 -->
+    <main>
+        <!--main slide 영역-->
+        <article class="slide_wrapper">
+            <div id="main_slide">
+                <ul>
+                    <li class="slide1">
+                        <div><a href="#"title=""><img src="./images/main_slide/main_slide_img1.jpg" alt=""></a></div>
+                        <div class="slide_text">
+                            <h3>윤곽을 타고 흐르는 수분빛 글로우</h3>
+                            <p>NEW 글로우 래스팅 파운데이션</p>
+                            <a href="#" title="자세히 보기">자세히 보기</a>
+                        </div>
+                    </li>
+                    <li class="slide2"><div><a href="#" title=""><img src="./images/main_slide/main_slide_img2.jpg" alt=""></a></div>
+                        <div class="slide_text">
+                            <h3>취향에 따라 헤라만의 정교한 컬러 디테일</h3>
+                            <p>센슈얼 립 라인</p>
+                            <a href="#" title="자세히 보기">자세히 보기</a>
+                        </div>
+                    </li>
+                    <li class="slide3"><div><a href="#" title=""><img src="./images/main_slide/main_slide_img3.jpg" alt=""></a></div>
+                        <div class="slide_text">
+                            <h3>베이스명가 헤라</h3>
+                            <p>베이스 메이크업</p>
+                            <a href="#" title="자세히 보기">자세히 보기</a>
+                        </div>
+                    </li>
+                    <li class="slide4"><div><a href="#" title=""><img src="./images/main_slide/main_slide_img4.jpg" alt=""></a></div>
+                        <div class="slide_text">
+                            <h3>SAILOR MOON GLOW CUSHION</h3>
+                            <p>어릴 적의 나의 수호천사, 세일러문! <br>나의 피부를 지켜줘!</p>
+                            <a href="#" title="자세히 보기">자세히 보기</a>
+                        </div>
+                    </li>
+                    <li class="slide5"><div><a href="#" title=""><img src="./images/main_slide/main_slide_img05.jpg" alt=""></a></div>
+                        <div class="slide_text">
+                            <h3>루즈 클래시 이누야샤 컬렉션</h3>
+                            <p>세련된 컬러와 고급스러운 글로우에 정교하고 편안하게 밀착되는 클래식 립스틱</p>
+                            <a href="#" title="자세히 보기">자세히 보기</a>
+                        </div>
+                    </li>
+                </ul>
+                <!-- 좌우 방향 버튼 -->
+                <div class="left_btn">
+                    <img src="./images/main_slide/main_button_left.png" alt="왼쪽">
+                </div>
+                <div class="right_btn">
+                    <img src="./images/main_slide/main_button_right.png" alt="오른쪽">
+                </div>
+            <!-- 콘트롤 버튼 -->
+            <div class="ctrl_btn">
+                <div class="on">&nbsp;</div>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+            </div>
+            </div>
+            
+        </article>
+
+
+        <!-- 인기있는 상품 영역 -->
+        <article class="best_seller">
+            <h2>BEST SELER<br><span>인기있는 상품</span></h2>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="#" title="상품1">
+                        <div class="smell_box">
+                            <div>
+                                <img src="./images/best_slide/img1.png" alt="센슈얼 피팅 글로우 틴트">
+                            </div>
+                            <div class="best_text">
+                                <div class="best_font">
+                                    <p>센슈얼 피팅 글로우 틴트</p>
+                                </div>
+                                <div class="best_star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>960개 리뷰</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" title="상품2">
+                        <div class="smell_box">
+                            <div>
+                                <img src="./images/best_slide/img2.png" alt="에이지 어웨이 에스테틱BX 워터">
+                            </div>
+                            <div class="best_text">
+                                <div class="best_font">
+                                    <p>에이지 어웨이 에스테틱BX 워터</p>
+                                </div>
+                                <div class="best_star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>960개 리뷰</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" title="상품3">
+                        <div class="smell_box">
+                            <div>
+                                <img src="./images/best_slide/img3.png" alt="">
+                            </div>
+                            <div class="best_text">
+                                <div class="best_font">
+                                    <p>벨벳 나이트 퍼퓸드 샤워 젤</p>
+                                </div>
+                                <div class="best_star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>960개 리뷰</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" title="상품4">
+                        <div class="smell_box">
+                            <div>
+                                <img src="./images/best_slide/img4.jpg" alt="">
+                            </div>
+                            <div class="best_text">
+                                <div class="best_font">
+                                    <p>실키 스테이 24H 롱웨어<br> 파운데이션 SPF 20/ PA ++</p>
+                                </div>
+                                <div class="best_star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>960개 리뷰</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" title="상품5">
+                        <div class="smell_box">
+                            <div>
+                                <img src="./images/best_slide/img5.jpg" alt="">
+                            </div>
+                            <div class="best_text">
+                                <div class="best_font">
+                                    <p>에이지 어웨이 에스테틱BX 리프팅 밤</p>
+                                </div>
+                                <div class="best_star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>960개 리뷰</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+    </article>
+
+    <!-- 새로운 상품 영역 -->
+   <article class="new_items">
+    <h2>NEW ITEMS<br><span>새로운 상품</span></h2>
+    <div class="new_items_top">
+        <img src="./images/new_items/new_items_img1.jpg" alt="">
+        <div class="new_items_top_text">
+            <span>실키 스테이 24H 롱웨어<br class="jump"> 파운데이션SPF 20 / PA++</span>
+            <p>
+            베이스 명가 헤라와 함께<br class="jump">
+            내 피부 같이 고급스럽게<br>
+            마무리 되는 실키 스킨을<br class="jump">
+            경험해보세요.
+            </p>
+            <div class="new_items_top_btn">
+                <a href="#" title="제품보러가기">제품 보러가기</a>
+            </div>
+        </div>
+    </div>
+    <div class="new_items_bottom">
+        <img src="./images/new_items/new_items_img2.jpg" alt="">
+        <div class="new_items_bottom_text">
+            <span>루즈 홀릭 쉬어 매트</span>
+            <p>
+            입술의 컨디션과 상관없이<br class="jump">
+                   놀랍도록 자유로운<br>
+                  FLOWING MOVEMENT가<br class="jump">
+                밀도있는 순간 선사.<br>
+            </p>
+            <div class="new_items_bottom_btn">
+                <a href="#" title="제품보러가기">제품 보러가기</a>
+            </div>
+        </div>
+    </div>
+   </article>
+
+<!-- 셀프 스킨 진단 영역 -->
+   <article class="self_skin">
+    <div class="title_box">
+        <h2>SELF SKIN TEST<br>셀프 스킨 진단</h2>
+        <p>핸드폰 어플 하나로 언제나 어디서든<br>스마트하고 체계적으로 내 피부 상태 체크</p>
+        <div class="qr_code">
+            <ul>
+                <li><img src="./images/self_skin/google_qr.png" alt=""></li>
+                <li><img src="./images/self_skin/apple_qr.png" alt=""></li>
+                <li><img src="./images/self_skin/google_play.png" alt=""></li>
+                <li><img src="./images/self_skin/app_store.png" alt=""></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <img class="ex_img" src="./images/self_skin/phone2.png" alt="">
+    </div>
+
+    </article>
+
+    <!-- 캠페인 영역 -->
+    <article class="campaign">
+        <h2>CAMPAIGN</h2>
+        <div class="campaign_imgs">
+            <ul>
+                <li><a href="#" title="캠페인1"><img src="./images/campaign/campaign1.png" alt="캠페인1"></a></li>
+                <li><a href="#" title="캠페인2"><img src="./images/campaign/campaign2.png" alt="캠페인2"></a></li>
+                <li><a href="#" title="캠페인3"><img src="./images/campaign/campaign3.png" alt="캠페인3"></a></li>
+                <li><a href="#" title="캠페인4"><img src="./images/campaign/campaign4.png" alt="캠페인4"></a></li>
+                <li><a href="#" title="캠페인5"><img src="./images/campaign/campaign5.png" alt="캠페인5"></a></li>
+                <li><a href="#" title="캠페인6"><img src="./images/campaign/campaign6.png" alt="캠페인6"></a></li>
+                <li><a href="#" title="캠페인7"><img src="./images/campaign/campaign7.png" alt="캠페인7"></a></li>
+                <li><a href="#" title="캠페인8"><img src="./images/campaign/campaign8.png" alt="캠페인8"></a></li>
+                <li><a href="#" title="캠페인9"><img src="./images/campaign/campaign9.png" alt="캠페인9"></a></li>              
+            </ul>
+        </div>
+        <div class="campaign_btn">
+            <a href="#" title="캠페인 바로가기">바로가기</a>
+        </div>
+    </article>
+
+    <!-- world of city 영역 -->
+    <article class="world_city">
+        <h2>HERA World Of City</h2>
+        <div>
+            <ul>
+                <li class="city_text"><a herf="#" title="서울리스타">서울 Seoul</a><span>같은 색깔 도시 속 유일한 컬러</span></li>
+                <li><a herf="#" title="서울리스타 이미지"><img src="./images/world_of_city/seoul_img.png"></a></li>
+                </ul>
+                <ul>
+                    <li><a href="#" title="도쿄리스타이미지"><img src="./images/world_of_city/tokyo_img.png"></a></li>
+                    <li class="city_text"><a href="#" title="도쿄리스타">도쿄 Tokyo</a><span>익숙함과 새로움의 조화로운 컬러</span></li>
+                </ul>
+                <ul>
+                    <li class="city_text"><a herf="#" title="상하이리스타">상하이 Shanghai</a><span>동서양의 색깔이 융합된 매혹적인 컬러</span></li>
+                    <li><a href="#" title="상하이리스타이미지"><img src="./images/world_of_city/shanghai_img.png"></a></li>
+                </ul>
+                <div class="city_btn">
+                    <a href="#" title="더보기">더보기</a>
+                </div>
+        </div>
+    </article>
+    </main>
+
+    <a href="#" id="top_btn" title="top_btn"><i class="fas fa-arrow-up"></i></a>
+
+    <footer>
+        <div class="footer_sns">
+            <ul>
+                <li><a href="#" title="인스타"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#" title="유튜브"><i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="#" title="페이스북"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#" title="카카오챗"><img src="./images/footer/kakao_chat.png" alt=""></a></li>
+            </ul>
+        </div>
+        <div class="footer_menu">
+            <ul>
+                <li><a href="#" title="서비스 이용약관">서비스 이용약관</a></li>
+                <li>&#x007C;</li>
+                <li><a href="#" title="UGC 이용약관">UGC 이용약관</a></li>
+                <li>&#x007C;</li>
+                <li><a href="#" title="개인정보처리방침">개인정보처리방침</a></li>
+                <li>&#x007C;</li>
+                <li><a href="#" title="영상정보처리방침">영상정보처리방침</a></li>
+                <li>&#x007C;</li>
+                <li><a href="#" title="뷰티포인트">뷰티포인트</a></li>
+            </ul>
+        </div>
+        <div class="language_option">
+            <form action="">
+                <select name="" id="">
+                    <option value="">Language</option>
+                    <option value="">한국어</option>
+                    <option value="">English</option>
+                    <option value="">中文</option>
+                    <option value="">日本語</option>
+                </select>
+            </form>
+        </div>
+        <div class="company_info">
+            <ul>
+                <li>대표자 : 홍길동</li>
+                <li>&#x007c;</li>
+                <li>주소 : 서울특별시 중구 세종대로 0길 00</li>
+                <li>&#x007c;</li>
+                <li>사업자등록번호 : 000-00-00000</li>
+            </ul>
+        </div>
+        <div class="company_phone">
+            <ul>
+                <li>고객 상담팀(수신자 요금 부담)080-023-5454</li>
+                <li>(상담시간 월 ~ 금:AM09:00 ~ PM06:00)</li>
+            </ul>
+        </div>
+        <span>&#x24D2;AMOREPACIFIC CORPORATION All right reserve.</span>
+
+    </footer>
+
+
+    <!-- gnb 아코디언 메뉴 서식 -->
+    <script>
+        $(document).ready(function(){
+    
+          //1. 변수선언
+          const mnu = $('.gnb > ul > .mid_menu > label'); //메인메뉴 변수
+    
+          //2. 메뉴 클릭시 해당 서브 나오게 하기
+          mnu.click(function(){
+            // alert('클릭');
+            $(this).siblings('.sub').slideToggle();
+            $(this).find('i').toggleClass('act');
+          });
+
+        });
+      </script>
+
+  <!-- main_slide -->
+  <script src="./js/main_slide.js"></script>
+
+               <!-- Swiper JS -->
+               <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+            
+               <!-- Initialize Swiper -->
+               <script>
+                 var swiper = new Swiper(".mySwiper", {
+                   slidesPerView: 3,
+                   loop: true,
+                   spaceBetween: 0,
+                   pagination: {
+                    el: ".swiper-pagination",
+                     clickable: true,
+                   },
+                   navigation: {
+                     nextEl: ".swiper-button-next",
+                     prevEl: ".swiper-button-prev",
+                 },
+                 // swiper의 반응형은 mobile -> desktop 으로 작업한다. 
+                 breakpoints: { 
+                     460: { 
+                         slidesPerView: 1, 
+                         spaceBetween: 10, 
+                     }, 
+                     767: { 
+                         slidesPerView: 2, 
+                         spaceBetween: 10, 
+                     }, 
+                     1024: { 
+                         slidesPerView: 3, 
+                         spaceBetween: 30, 
+                     }, 
+                 }, 
+                 });
+               </script>
+</body>
+
+</html>
